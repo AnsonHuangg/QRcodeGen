@@ -12,10 +12,11 @@ from openpyxl import load_workbook
 ####################################################################################################
 # Path want to check
 ####################################################################################################
-directoryNow = os.path.dirname(os.path.abspath(__file__))
+directoryNow = os.path.dirname(__file__)
 
 folderPathOutput = directoryNow + "\\Output"
 folderPathInput = directoryNow + "\\Input"
+dataFile = directoryNow + "\\data.xlsx"
 
 ####################################################################################################
 # Check whether the folder is exist. If no, auto generate
@@ -29,7 +30,7 @@ if not os.path.isdir(folderPathOutput):
 ####################################################################################################
 # Read Excel file
 ####################################################################################################
-wb = load_workbook('data.xlsx')
+wb = load_workbook(dataFile)
 
 ####################################################################################################
 # Get Sheet by name
